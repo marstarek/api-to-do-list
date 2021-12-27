@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            min-width: 250px;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul li {
+            cursor: pointer;
+            position: relative;
+            padding: 12px 8px 12px 40px;
+            list-style-type: none;
+            background: rgb(238, 238, 238);
+            font-size: 18px;
+            transition: 0.2s;
+            /* make the list items unselectable */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            text-align: center;
+        }
+        
+        .header {
+            background-color: #40407a;
+            padding: 95px 19px;
+            color: white;
+            text-align: center;
+        }
+        
+        .filter {
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            width: 25%;
+            padding: 10.5px;
+            float: left;
+            font-size: 16px;
+        }
+        
+        .addBtn {
+            padding: 11px;
+            width: 25%;
+            background: hsl(0, 0%, 100%);
+            color: rgb(78, 78, 78);
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 0;
+        }
+        
+        .addBtn:hover {
+            background-color: #474787;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myDIV" class="header">
+        <h2 style="margin:5px"> To Do List</h2>
+        <select id="testx" class="filter">
+            <option disabled >Select user id</option>
+            <option   value="1">1</option>
+            <option value="2">2</option>
+            <option  value="3">3</option>
+            <option  value="4">4</option>
+            <option  value="5">5</option>
+            <option  value="6">6</option>
+            <option  value="7">7</option>
+            <option  value="8">8</option>
+            <option  value="9">9</option>
+            <option  value="10">10</option>
+          </select>
+
+        <select id="selector" class="filter">
+            <option disabled selected>Select Status</option>
+            <option id="completed" value="completed">completed</option>
+            <option id="notcompleted" value="notcompleted">notcompleted</option>
+          </select>
+        <span class="addBtn" id="searchTodo">load</span>
+        <span class="addBtn" id="reset">reset</span>
+    </div>
+    <ul id="myUL">
+    </ul>
+    <script src="./todo.js"></script>
+</body>
+
+</html>
